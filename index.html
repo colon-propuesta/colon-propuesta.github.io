@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colón Web Propuesta</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600..900,100&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+.ti{display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat;vertical-align:-.125em;flex-shrink:0}.ti-map-pin{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDYuNUEyLjUgMi41IDAgMCAxIDE0LjUgOWEyLjUgMi41IDAgMCAxLTIuNSAyLjVBMi41IDIuNSAwIDAgMSA5LjUgOSAyLjUgMi41IDAgMCAxIDEyIDYuNU0xMiAyYTcgNyAwIDAgMSA3IDdjMCA1LjI1LTcgMTMtNyAxM1M1IDE0LjI1IDUgOWE3IDcgMCAwIDEgNy03bTAgMmE1IDUgMCAwIDAtNSA1YzAgMSAwIDMgNSA5LjcxQzE3IDEyIDE3IDEwIDE3IDlhNSA1IDAgMCAwLTUtNSIvPjwvc3ZnPg==")}.ti-truck{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE4IDE4LjVjLjgzIDAgMS41LS42NyAxLjUtMS41cy0uNjctMS41LTEuNS0xLjUtMS41LjY3LTEuNSAxLjUuNjcgMS41IDEuNSAxLjVtMS41LTlIMTdWMTJoNC40NnpNNiAxOC41Yy44MyAwIDEuNS0uNjcgMS41LTEuNXMtLjY3LTEuNS0xLjUtMS41LTEuNS42Ny0xLjUgMS41LjY3IDEuNSAxLjUgMS41TTIwIDhsMyA0djVoLTJjMCAxLjY2LTEuMzQgMy0zIDNzLTMtMS4zNC0zLTNIOWMwIDEuNjYtMS4zNCAzLTMgM3MtMy0xLjM0LTMtM0gxVjZjMC0xLjExLjg5LTIgMi0yaDE0djR6TTMgNnY5aC43NmMuNTUtLjYxIDEuMzUtMSAyLjI0LTFzMS42OS4zOSAyLjI0IDFIMTVWNnoiLz48L3N2Zz4=")}.ti-credit-card{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwIDhINFY2aDE2bTAgMTJINHYtNmgxNm0wLThINGMtMS4xMSAwLTIgLjg5LTIgMnYxMmEyIDIgMCAwIDAgMiAyaDE2YTIgMiAwIDAgMCAyLTJWNmEyIDIgMCAwIDAtMi0yIi8+PC9zdmc+")}.ti-search{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTkuNSAzQTYuNSA2LjUgMCAwIDEgMTYgOS41YzAgMS42MS0uNTkgMy4wOS0xLjU2IDQuMjNsLjI3LjI3aC43OWw1IDUtMS41IDEuNS01LTV2LS43OWwtLjI3LS4yN0E2LjUyIDYuNTIgMCAwIDEgOS41IDE2IDYuNSA2LjUgMCAwIDEgMyA5LjUgNi41IDYuNSAwIDAgMSA5LjUgM20wIDJDNyA1IDUgNyA1IDkuNVM3IDE0IDkuNSAxNCAxNCAxMiAxNCA5LjUgMTIgNSA5LjUgNSIvPjwvc3ZnPg==")}.ti-user{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDRhNCA0IDAgMCAxIDQgNCA0IDQgMCAwIDEtNCA0IDQgNCAwIDAgMS00LTQgNCA0IDAgMCAxIDQtNG0wIDJhMiAyIDAgMCAwLTIgMiAyIDIgMCAwIDAgMiAyIDIgMiAwIDAgMCAyLTIgMiAyIDAgMCAwLTItMm0wIDdjMi42NyAwIDggMS4zMyA4IDR2M0g0di0zYzAtMi42NyA1LjMzLTQgOC00bTAgMS45Yy0yLjk3IDAtNi4xIDEuNDYtNi4xIDIuMXYxLjFoMTIuMlYxN2MwLS42NC0zLjEzLTIuMS02LjEtMi4xIi8+PC9zdmc+")}.ti-shopping-bag{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE5IDZoLTJjMC0yLjgtMi4yLTUtNS01UzcgMy4yIDcgNkg1Yy0xLjEgMC0yIC45LTIgMnYxMmMwIDEuMS45IDIgMiAyaDE0YzEuMSAwIDItLjkgMi0yVjhjMC0xLjEtLjktMi0yLTJtLTctM2MxLjcgMCAzIDEuMyAzIDNIOWMwLTEuNyAxLjMtMyAzLTNtNyAxN0g1VjhoMTR6bS03LThjLTEuNyAwLTMtMS4zLTMtM0g3YzAgMi44IDIuMiA1IDUgNXM1LTIuMiA1LTVoLTJjMCAxLjctMS4zIDMtMyAzIi8+PC9zdmc+")}.ti-brand-whatsapp{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyLjA0IDJjLTUuNDYgMC05LjkxIDQuNDUtOS45MSA5LjkxIDAgMS43NS40NiAzLjQ1IDEuMzIgNC45NUwyLjA1IDIybDUuMjUtMS4zOGMxLjQ1Ljc5IDMuMDggMS4yMSA0Ljc0IDEuMjEgNS40NiAwIDkuOTEtNC40NSA5LjkxLTkuOTEgMC0yLjY1LTEuMDMtNS4xNC0yLjktNy4wMUE5LjgyIDkuODIgMCAwIDAgMTIuMDQgMm0uMDEgMS42N2MyLjIgMCA0LjI2Ljg2IDUuODIgMi40MmE4LjIzIDguMjMgMCAwIDEgMi40MSA1LjgzYzAgNC41NC0zLjcgOC4yMy04LjI0IDguMjMtMS40OCAwLTIuOTMtLjM5LTQuMTktMS4xNWwtLjMtLjE3LTMuMTIuODIuODMtMy4wNC0uMi0uMzJhOC4yIDguMiAwIDAgMS0xLjI2LTQuMzhjLjAxLTQuNTQgMy43LTguMjQgOC4yNS04LjI0TTguNTMgNy4zM2MtLjE2IDAtLjQzLjA2LS42Ni4zMS0uMjIuMjUtLjg3Ljg2LS44NyAyLjA3IDAgMS4yMi44OSAyLjM5IDEgMi41Ni4xNC4xNyAxLjc2IDIuNjcgNC4yNSAzLjczLjU5LjI3IDEuMDUuNDIgMS40MS41My41OS4xOSAxLjEzLjE2IDEuNTYuMS40OC0uMDcgMS40Ni0uNiAxLjY3LTEuMThzLjIxLTEuMDcuMTUtMS4xOGMtLjA3LS4xLS4yMy0uMTYtLjQ4LS4yNy0uMjUtLjE0LTEuNDctLjc0LTEuNjktLjgyLS4yMy0uMDgtLjM3LS4xMi0uNTYuMTItLjE2LjI1LS42NC44MS0uNzguOTctLjE1LjE3LS4yOS4xOS0uNTMuMDctLjI2LS4xMy0xLjA2LS4zOS0yLTEuMjMtLjc0LS42Ni0xLjIzLTEuNDctMS4zOC0xLjcyLS4xMi0uMjQtLjAxLS4zOS4xMS0uNS4xMS0uMTEuMjctLjI5LjM3LS40NC4xMy0uMTQuMTctLjI1LjI1LS40MS4wOC0uMTcuMDQtLjMxLS4wMi0uNDMtLjA2LS4xMS0uNTYtMS4zNS0uNzctMS44NC0uMi0uNDgtLjQtLjQyLS41Ni0uNDMtLjE0IDAtLjMtLjAxLS40Ny0uMDEiLz48L3N2Zz4=")}.ti-mail{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIyIDZjMC0xLjEtLjktMi0yLTJINGMtMS4xIDAtMiAuOS0yIDJ2MTJjMCAxLjEuOSAyIDIgMmgxNmMxLjEgMCAyLS45IDItMnptLTIgMC04IDUtOC01em0wIDEySDRWOGw4IDUgOC01eiIvPjwvc3ZnPg==")}.ti-clock{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDIwYTggOCAwIDAgMCA4LTggOCA4IDAgMCAwLTgtOCA4IDggMCAwIDAtOCA4IDggOCAwIDAgMCA4IDhtMC0xOGExMCAxMCAwIDAgMSAxMCAxMCAxMCAxMCAwIDAgMS0xMCAxMEM2LjQ3IDIyIDIgMTcuNSAyIDEyQTEwIDEwIDAgMCAxIDEyIDJtLjUgNXY1LjI1bDQuNSAyLjY3LS43NSAxLjIzTDExIDEzVjd6Ii8+PC9zdmc+")}.ti-school{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDMgMSA5bDQgMi4xOHY2TDEyIDIxbDctMy44MnYtNmwyLTEuMDlWMTdoMlY5em02LjgyIDZMMTIgMTIuNzIgNS4xOCA5IDEyIDUuMjh6TTE3IDE2bC01IDIuNzJMNyAxNnYtMy43M0wxMiAxNWw1LTIuNzN6Ii8+PC9zdmc+")}.ti-users{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDVhMy41IDMuNSAwIDAgMC0zLjUgMy41QTMuNSAzLjUgMCAwIDAgMTIgMTJhMy41IDMuNSAwIDAgMCAzLjUtMy41QTMuNSAzLjUgMCAwIDAgMTIgNW0wIDJhMS41IDEuNSAwIDAgMSAxLjUgMS41QTEuNSAxLjUgMCAwIDEgMTIgMTBhMS41IDEuNSAwIDAgMS0xLjUtMS41QTEuNSAxLjUgMCAwIDEgMTIgN001LjUgOEEyLjUgMi41IDAgMCAwIDMgMTAuNWMwIC45NC41MyAxLjc1IDEuMjkgMi4xOC4zNi4yLjc3LjMyIDEuMjEuMzJzLjg1LS4xMiAxLjIxLS4zMmMuMzctLjIxLjY4LS41MS45MS0uODdBNS40MiA1LjQyIDAgMCAxIDYuNSA4LjV2LS4yOGMtLjMtLjE0LS42NC0uMjItMS0uMjJtMTMgMGMtLjM2IDAtLjcuMDgtMSAuMjJ2LjI4YzAgMS4yLS4zOSAyLjM2LTEuMTIgMy4zMS4xMi4xOS4yNS4zNC40LjQ5YTIuNDgyIDIuNDgyIDAgMCAwIDEuNzIuN2MuNDQgMCAuODUtLjEyIDEuMjEtLjMyLjc2LS40MyAxLjI5LTEuMjQgMS4yOS0yLjE4QTIuNSAyLjUgMCAwIDAgMTguNSA4TTEyIDE0Yy0yLjM0IDAtNyAxLjE3LTcgMy41VjE5aDE0di0xLjVjMC0yLjMzLTQuNjYtMy41LTctMy41bS03LjI5LjU1QzIuNzggMTQuNzggMCAxNS43NiAwIDE3LjVWMTloM3YtMS45M2MwLTEuMDEuNjktMS44NSAxLjcxLTIuNTJtMTQuNTggMGMxLjAyLjY3IDEuNzEgMS41MSAxLjcxIDIuNTJWMTloM3YtMS41YzAtMS43NC0yLjc4LTIuNzItNC43MS0yLjk1TTEyIDE2YzEuNTMgMCAzLjI0LjUgNC4yMyAxSDcuNzdjLjk5LS41IDIuNy0xIDQuMjMtMSIvPjwvc3ZnPg==")}.ti-notebook{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE3IDR2NmwtMi0yLTIgMlY0SDl2MTZoMTBWNHpNMyA3VjVoMlY0YTIgMiAwIDAgMSAyLTJoMTJjMS4wNSAwIDIgLjk1IDIgMnYxNmMwIDEuMDUtLjk1IDItMiAySDdjLTEuMDUgMC0yLS45NS0yLTJ2LTFIM3YtMmgydi00SDN2LTJoMlY3em0yLTJ2MmgyVjV6bTAgMTRoMnYtMkg1em0wLTZoMnYtMkg1eiIvPjwvc3ZnPg==")}.ti-paperclip{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE2LjUgNnYxMS41YTQgNCAwIDAgMS00IDQgNCA0IDAgMCAxLTQtNFY1QTIuNSAyLjUgMCAwIDEgMTEgMi41IDIuNSAyLjUgMCAwIDEgMTMuNSA1djEwLjVhMSAxIDAgMCAxLTEgMSAxIDEgMCAwIDEtMS0xVjZIMTB2OS41YTIuNSAyLjUgMCAwIDAgMi41IDIuNSAyLjUgMi41IDAgMCAwIDIuNS0yLjVWNWE0IDQgMCAwIDAtNC00IDQgNCAwIDAgMC00IDR2MTIuNWE1LjUgNS41IDAgMCAwIDUuNSA1LjUgNS41IDUuNSAwIDAgMCA1LjUtNS41VjZ6Ii8+PC9zdmc+")}.ti-palette{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDIyQTEwIDEwIDAgMCAxIDIgMTIgMTAgMTAgMCAwIDEgMTIgMmM1LjUgMCAxMCA0IDEwIDlhNiA2IDAgMCAxLTYgNmgtMS44Yy0uMyAwLS41LjItLjUuNSAwIC4xLjEuMi4xLjMuNC41LjYgMS4xLjYgMS43LjEgMS40LTEgMi41LTIuNCAyLjVtMC0xOGE4IDggMCAwIDAtOCA4IDggOCAwIDAgMCA4IDhjLjMgMCAuNS0uMi41LS41IDAtLjItLjEtLjMtLjEtLjQtLjQtLjUtLjYtMS0uNi0xLjYgMC0xLjQgMS4xLTIuNSAyLjUtMi41SDE2YTQgNCAwIDAgMCA0LTRjMC0zLjktMy42LTctOC03bS01LjUgNmMuOCAwIDEuNS43IDEuNSAxLjVTNy4zIDEzIDYuNSAxMyA1IDEyLjMgNSAxMS41IDUuNyAxMCA2LjUgMTBtMy00Yy44IDAgMS41LjcgMS41IDEuNVMxMC4zIDkgOS41IDkgOCA4LjMgOCA3LjUgOC43IDYgOS41IDZtNSAwYy44IDAgMS41LjcgMS41IDEuNVMxNS4zIDkgMTQuNSA5IDEzIDguMyAxMyA3LjUgMTMuNyA2IDE0LjUgNm0zIDRjLjggMCAxLjUuNyAxLjUgMS41cy0uNyAxLjUtMS41IDEuNS0xLjUtLjctMS41LTEuNS43LTEuNSAxLjUtMS41Ii8+PC9zdmc+")}.ti-device-laptop{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTQgNmgxNnYxMEg0bTE2IDJhMiAyIDAgMCAwIDItMlY2YTIgMiAwIDAgMC0yLTJINGMtMS4xMSAwLTIgLjg5LTIgMnYxMGEyIDIgMCAwIDAgMiAySDB2MmgyNHYtMnoiLz48L3N2Zz4=")}.ti-binoculars{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTExIDZoMnY3aC0yek05IDIwYTEgMSAwIDAgMS0xIDFINWExIDEgMCAwIDEtMS0xdi01bDItOWg0djdhMSAxIDAgMCAxLTEgMXptMS0xNUg3VjNoM3ptNSAxNXYtNmExIDEgMCAwIDEtMS0xVjZoNGwyIDl2NWExIDEgMCAwIDEtMSAxaC0zYTEgMSAwIDAgMS0xLTFNMTQgNVYzaDN2MnoiLz48L3N2Zz4=")}.ti-wallet{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTUgM2EyIDIgMCAwIDAtMiAydjE0YTIgMiAwIDAgMCAyIDJoMTRhMiAyIDAgMCAwIDItMnYtMi4yOEEyIDIgMCAwIDAgMjIgMTVWOWEyIDIgMCAwIDAtMS0xLjcyVjVhMiAyIDAgMCAwLTItMnptMCAyaDE0djJoLTZhMiAyIDAgMCAwLTIgMnY2YTIgMiAwIDAgMCAyIDJoNnYySDV6bTggNGg3djZoLTd6bTMgMS41YTEuNSAxLjUgMCAwIDAtMS41IDEuNSAxLjUgMS41IDAgMCAwIDEuNSAxLjUgMS41IDEuNSAwIDAgMCAxLjUtMS41IDEuNSAxLjUgMCAwIDAtMS41LTEuNSIvPjwvc3ZnPg==")}.ti-pencil{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0ibTE0LjA2IDkgLjk0Ljk0TDUuOTIgMTlINXYtLjkyem0zLjYtNmMtLjI1IDAtLjUxLjEtLjcuMjlsLTEuODMgMS44MyAzLjc1IDMuNzUgMS44My0xLjgzYy4zOS0uMzkuMzktMS4wNCAwLTEuNDFsLTIuMzQtMi4zNGMtLjItLjItLjQ1LS4yOS0uNzEtLjI5bS0zLjYgMy4xOUwzIDE3LjI1VjIxaDMuNzVMMTcuODEgOS45NHoiLz48L3N2Zz4=")}.ti-gift{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIyIDEydjhhMiAyIDAgMCAxLTIgMkg0YTIgMiAwIDAgMS0yLTJ2LThhMSAxIDAgMCAxLTEtMVY4YTIgMiAwIDAgMSAyLTJoMy4xN0EzIDMgMCAwIDEgNiA1YTMgMyAwIDAgMSAzLTNjMSAwIDEuODguNSAyLjQzIDEuMjR2LS4wMUwxMiA0bC41Ny0uNzd2LjAxQzEzLjEyIDIuNSAxNCAyIDE1IDJhMyAzIDAgMCAxIDMgMyAzIDMgMCAwIDEtLjE3IDFIMjFhMiAyIDAgMCAxIDIgMnYzYTEgMSAwIDAgMS0xIDFNNCAyMGg3di04SDR6bTE2IDB2LThoLTd2OHpNOSA0YTEgMSAwIDAgMC0xIDEgMSAxIDAgMCAwIDEgMSAxIDEgMCAwIDAgMS0xIDEgMSAwIDAgMC0xLTFtNiAwYTEgMSAwIDAgMC0xIDEgMSAxIDAgMCAwIDEgMSAxIDEgMCAwIDAgMS0xIDEgMSAwIDAgMC0xLTFNMyA4djJoOFY4em0xMCAwdjJoOFY4eiIvPjwvc3ZnPg==")}.ti-file-text{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTYgMmEyIDIgMCAwIDAtMiAydjE2YTIgMiAwIDAgMCAyIDJoMTJhMiAyIDAgMCAwIDItMlY4bC02LTZ6bTAgMmg3djVoNXYxMUg2em0yIDh2Mmg4di0yem0wIDR2Mmg1di0yeiIvPjwvc3ZnPg==")}.ti-printer{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE5IDhjMS42NiAwIDMgMS4zNCAzIDN2NmgtNHY0SDZ2LTRIMnYtNmMwLTEuNjYgMS4zNC0zIDMtM2gxVjNoMTJ2NXpNOCA1djNoOFY1em04IDE0di00SDh2NHptMi00aDJ2LTRjMC0uNTUtLjQ1LTEtMS0xSDVjLS41NSAwLTEgLjQ1LTEgMXY0aDJ2LTJoMTJ6bTEtMy41YzAgLjU1LS40NSAxLTEgMXMtMS0uNDUtMS0xIC40NS0xIDEtMSAxIC40NSAxIDEiLz48L3N2Zz4=")}.ti-coffee{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIgMjF2LTJoMTh2MnpNMjAgOFY1aC0ydjN6bTAtNWEyIDIgMCAwIDEgMiAydjNhMiAyIDAgMCAxLTIgMmgtMnYzYTQgNCAwIDAgMS00IDRIOGE0IDQgMCAwIDEtNC00VjN6bS00IDJINnY4YTIgMiAwIDAgMCAyIDJoNmEyIDIgMCAwIDAgMi0yeiIvPjwvc3ZnPg==")}.ti-truck-delivery{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE4IDE4LjVjLjgzIDAgMS41LS42NyAxLjUtMS41cy0uNjctMS41LTEuNS0xLjUtMS41LjY3LTEuNSAxLjUuNjcgMS41IDEuNSAxLjVtMS41LTlIMTdWMTJoNC40NnpNNiAxOC41Yy44MyAwIDEuNS0uNjcgMS41LTEuNXMtLjY3LTEuNS0xLjUtMS41LTEuNS42Ny0xLjUgMS41LjY3IDEuNSAxLjUgMS41TTIwIDhsMyA0djVoLTJjMCAxLjY2LTEuMzQgMy0zIDNzLTMtMS4zNC0zLTNIOWMwIDEuNjYtMS4zNCAzLTMgM3MtMy0xLjM0LTMtM0gxVjZjMC0xLjExLjg5LTIgMi0yaDE0djR6TTMgNnY5aC43NmMuNTUtLjYxIDEuMzUtMSAyLjI0LTFzMS42OS4zOSAyLjI0IDFIMTVWNnptNyAxIDMuNSAzLjVMMTAgMTR2LTIuNUg1di0yaDV6Ii8+PC9zdmc+")}.ti-map-2{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0ibTIwLjUgMy0uMTYuMDNMMTUgNS4xIDkgMyAzLjM2IDQuOWMtLjIxLjA3LS4zNi4yNS0uMzYuNDhWMjAuNWEuNS41IDAgMCAwIC41LjVsLjE2LS4wM0w5IDE4LjlsNiAyLjEgNS42NC0xLjljLjIxLS4wNy4zNi0uMjUuMzYtLjQ4VjMuNWEuNS41IDAgMCAwLS41LS41TTEwIDUuNDdsNCAxLjR2MTEuNjZsLTQtMS40em0tNSAuOTkgMy0xLjAxdjExLjdsLTMgMS4xNnptMTQgMTEuMDgtMyAxLjAxVjYuODZsMy0xLjE2eiIvPjwvc3ZnPg==")}.ti-player-play{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTggNS4xNHYxNGwxMS03eiIvPjwvc3ZnPg==")}.ti-heart{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0ibTEyLjEgMTguNTUtLjEuMS0uMTEtLjFDNy4xNCAxNC4yNCA0IDExLjM5IDQgOC41IDQgNi41IDUuNSA1IDcuNSA1YzEuNTQgMCAzLjA0IDEgMy41NyAyLjM2aDEuODZDMTMuNDYgNiAxNC45NiA1IDE2LjUgNWMyIDAgMy41IDEuNSAzLjUgMy41IDAgMi44OS0zLjE0IDUuNzQtNy45IDEwLjA1TTE2LjUgM2MtMS43NCAwLTMuNDEuODEtNC41IDIuMDhDMTAuOTEgMy44MSA5LjI0IDMgNy41IDMgNC40MiAzIDIgNS40MSAyIDguNWMwIDMuNzcgMy40IDYuODYgOC41NSAxMS41M0wxMiAyMS4zNWwxLjQ1LTEuMzJDMTguNiAxNS4zNiAyMiAxMi4yNyAyMiA4LjUgMjIgNS40MSAxOS41OCAzIDE2LjUgMyIvPjwvc3ZnPg==")}.ti-message-circle{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwIDJINGMtMS4xIDAtMiAuOS0yIDJ2MThsNC00aDE0YzEuMSAwIDItLjkgMi0yVjRjMC0xLjEtLjktMi0yLTJtMCAxNEg1LjJMNCAxNy4yVjRoMTZ6Ii8+PC9zdmc+")}.ti-send{--i:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0ibTQgNi4wMyA3LjUgMy4yMi03LjUtMXptNy41IDguNzJMNCAxNy45N3YtMi4yMnpNMiAzdjdsMTUgMi0xNSAydjdsMjEtOXoiLz48L3N2Zz4=")}
+
+:root{
+  --olive:#3E5827; --olive-dk:#2B3E1C; --olive-2:#4E6B33; --olive-soft:#E7ECDD; --leaf:#A9C77F;
+  --brass:#A9824A; --gold:#D2B07A; --brass-dk:#7E5F33;
+  --cafe:#4A2E22; --cafe-soft:#EFE4D6;
+  --paper:#F5EFE3; --white:#fff; --ink:#1F2419; --muted:#666A5C; --line:#E2DACB;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:Lexend,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;font-weight:400}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-variation-settings:"SOFT" 100;line-height:1.02;font-weight:800;letter-spacing:-.01em}
+.ti{font-size:20px;line-height:1}
+
+.proposal{background:var(--ink);color:var(--paper);font-size:12px;text-align:center;padding:6px 12px}
+.proposal b{color:var(--gold);font-weight:500}
+
+.topbar{background:var(--olive-dk);color:var(--gold);font-size:12.5px}
+.topbar .wrap{display:flex;gap:22px;justify-content:center;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.topbar span{display:flex;gap:6px;align-items:center}
+.topbar .ti{font-size:15px}
+
+header{background:var(--white);border-bottom:3px solid var(--brass);position:sticky;top:0;z-index:10}
+header .wrap{display:flex;align-items:center;gap:16px;height:72px}
+.logo img{height:34px;width:auto}
+.search{flex:1;display:flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:10px 16px;color:var(--muted);font-size:14px}
+.icons{display:flex;gap:16px;align-items:center;color:var(--olive)}
+.icons .ti{font-size:24px}
+.cart{position:relative}
+.cart i.n{position:absolute;top:-6px;right:-9px;background:var(--brass);color:#fff;font-style:normal;font-size:11px;font-weight:600;border-radius:999px;padding:0 6px}
+
+nav.cats{background:var(--white);border-bottom:1px solid var(--line)}
+nav.cats .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav.cats a{white-space:nowrap;font-size:13.5px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--white);color:var(--olive)}
+nav.cats a.on{background:var(--olive);color:var(--paper);border-color:var(--olive)}
+
+/* HERO con foto real del local */
+.hero{position:relative;color:var(--paper);min-height:560px;display:flex;align-items:flex-end;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(img/i1.jpg) center 30%/cover no-repeat}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,62,28,.35) 0%,rgba(43,62,28,.75) 45%,rgba(43,62,28,.96) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-top:120px;padding-bottom:56px;width:100%}
+.hero .hlogo{height:54px;width:auto;margin-bottom:22px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold);font-size:11.5px;font-weight:500;padding:6px 14px;border-radius:999px;letter-spacing:.14em;text-transform:uppercase}
+.hero h1{font-size:clamp(42px,7vw,78px);margin:16px 0 14px;max-width:760px}
+.spark{position:relative;display:inline-block;color:var(--leaf)}
+.spark::before,.spark::after{content:"";position:absolute;top:50%;width:18px;height:28px;transform:translateY(-50%);background:
+ linear-gradient(var(--gold),var(--gold)) 0 0/18px 3px no-repeat,
+ linear-gradient(var(--gold),var(--gold)) 0 12px/22px 3px no-repeat,
+ linear-gradient(var(--gold),var(--gold)) 0 24px/18px 3px no-repeat}
+.spark::before{left:-30px;transform:translateY(-50%) scaleX(-1)}
+.hero .spark::before{display:none}
+.hero .spark{margin-right:30px}
+.spark::after{right:-30px}
+.hero p{color:#dfe5d3;font-size:17px;max-width:520px;font-weight:300}
+.btns{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:15px;padding:14px 22px;border-radius:12px}
+.btn-gold{background:var(--gold);color:var(--olive-dk)}
+.btn-olive{background:var(--olive);color:var(--paper)}
+.btn-o{border:1px solid rgba(245,239,227,.5);color:var(--paper)}
+.since{position:absolute;right:16px;top:24px;z-index:1;width:104px;height:104px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;text-align:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;line-height:1.4;background:rgba(43,62,28,.55);backdrop-filter:blur(4px)}
+.since b{display:block;font-family:Fraunces,serif;font-size:22px;letter-spacing:0;text-transform:none;color:var(--paper)}
+
+/* destacados estilo historias */
+.stories{background:var(--white);border-bottom:1px solid var(--line)}
+.stories .wrap{display:flex;gap:18px;overflow-x:auto;padding-top:20px;padding-bottom:18px;scrollbar-width:none;justify-content:center}
+.st{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:12.5px;color:var(--olive);flex-shrink:0}
+.st .ring{width:72px;height:72px;border-radius:50%;padding:3px;border:2px solid var(--brass)}
+.st .in{width:100%;height:100%;border-radius:50%;background:var(--olive);color:var(--paper);display:grid;place-items:center}
+.st .in .ti{font-size:28px}
+.st .in.light{background:var(--paper);color:var(--olive);font-family:Fraunces,serif;font-weight:800;font-size:13px;line-height:1;text-align:center}
+
+section{padding:60px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px;gap:16px}
+.sec-head h2{font-size:clamp(32px,4.4vw,46px);color:var(--olive)}
+.sec-head p{color:var(--muted);margin-top:6px;font-size:15px}
+.sec-head a{font-weight:500;color:var(--brass-dk);font-size:15px;white-space:nowrap}
+
+/* beneficios */
+.bene{background:var(--olive-soft);border-radius:24px;padding:40px;text-align:center;position:relative;overflow:hidden}
+.bene h2{font-size:clamp(48px,8vw,84px);color:var(--olive)}
+.bene h2 .spark{color:var(--olive)}
+.bene h2 .spark::before,.bene h2 .spark::after{filter:none}
+.bene .sub{color:var(--olive-2);font-size:17px;margin-top:8px}
+.bene .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;text-align:left}
+.bcard{background:var(--white);border-radius:18px;padding:22px;border:1px solid var(--line)}
+.bcard .ti{font-size:28px;color:var(--brass)}
+.bcard b{display:block;font-family:Fraunces,serif;font-size:24px;color:var(--olive);margin:8px 0 4px}
+.bcard small{color:var(--muted);font-size:14px}
+.club{margin-top:14px;background:var(--olive);color:var(--paper);border-radius:18px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;flex-wrap:wrap}
+.club span{display:flex;gap:12px;align-items:center}
+.club .ti{font-size:30px;color:var(--gold)}
+
+.lista{background:var(--cafe);color:var(--paper);border-radius:24px;padding:44px;display:grid;grid-template-columns:1fr 1.2fr;gap:32px;align-items:center}
+.lista h2{font-size:clamp(34px,4.4vw,48px)}
+.lista h2 em{color:var(--gold);font-style:normal}
+.lista p{color:#e3d4bf;margin-top:10px;font-weight:300}
+.steps{display:grid;gap:12px}
+.step{background:var(--paper);color:var(--ink);border-radius:14px;padding:18px;display:flex;gap:14px;align-items:center}
+.step .n{width:38px;height:38px;border-radius:50%;background:var(--olive);color:var(--gold);display:grid;place-items:center;font-family:Fraunces,serif;font-weight:800;font-size:19px;flex-shrink:0}
+.step b{display:block;color:var(--olive);font-weight:500}
+.step small{color:var(--muted)}
+
+.catgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px 12px;text-align:center;font-weight:500;font-size:14px;color:var(--olive)}
+.cat .ci{width:58px;height:58px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;background:var(--olive-soft);color:var(--olive)}
+.cat:nth-child(even) .ci{background:var(--cafe-soft);color:var(--cafe)}
+.cat .ti{font-size:26px}
+.cat small{display:block;font-size:11.5px;color:var(--muted);font-weight:400;margin-top:2px}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{aspect-ratio:1/1;display:grid;place-items:center;position:relative}
+.tag{position:absolute;top:12px;left:12px;background:var(--olive);color:var(--paper);font-size:11px;padding:4px 9px;border-radius:999px}
+.tag.low{background:var(--cafe);color:var(--gold)}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.brand{font-size:11px;color:var(--brass-dk);text-transform:uppercase;letter-spacing:.1em;font-weight:500}
+.card h3{font-family:Lexend,sans-serif;font-size:14.5px;font-weight:500;line-height:1.35;letter-spacing:0}
+.price{font-size:19px;font-weight:600;color:var(--cafe);margin-top:auto;padding-top:8px}
+.add{margin-top:10px;background:var(--olive);color:var(--paper);border-radius:10px;padding:10px;text-align:center;font-weight:500;font-size:14px}
+
+.emp{background:var(--olive-dk);color:var(--paper);border-radius:24px;padding:44px;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;border:1px solid var(--brass)}
+.emp h2{font-size:clamp(32px,4.4vw,44px)}
+.emp p{color:#d5dccb;margin-top:10px;font-weight:300}
+.emp ul{list-style:none;display:grid;gap:10px}
+.emp li{background:var(--olive);border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:center;font-size:15px}
+.emp li .ti{color:var(--gold);font-size:18px}
+
+/* visítanos */
+.visit{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-radius:24px;overflow:hidden;background:var(--white);border:1px solid var(--line)}
+.visit .ph{min-height:380px;background:url(img/i2.jpg) center/cover no-repeat}
+.visit .info{padding:36px}
+.visit h2{font-size:clamp(34px,4.4vw,46px);color:var(--olive)}
+.visit dl{margin-top:18px;display:grid;gap:14px}
+.visit dt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass-dk);font-weight:500}
+.visit dd{font-size:16px}
+
+/* instagram */
+.ig-head{display:flex;align-items:center;gap:14px}
+.ig-head img{width:64px;height:64px;border-radius:50%}
+.ig-head b{display:block;font-weight:500}
+.ig-head small{color:var(--muted)}
+.ig{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:20px}
+.ig > div{aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px}
+.ig .t1{background:var(--olive-soft);color:var(--olive)}
+.ig .t1 img,.ig .t2 img{height:14px;width:auto;margin-bottom:10px}
+.ig .t1 b{font-family:Fraunces,serif;font-weight:900;font-size:clamp(22px,3.4vw,38px);line-height:1}
+.ig .t1 small{font-size:clamp(9px,1.3vw,13px);margin-top:6px}
+.ig .t2{background:#B8D1A0;color:var(--olive-dk)}
+.ig .t2 b{font-family:Fraunces,serif;font-weight:900;font-size:clamp(18px,2.8vw,30px);line-height:1.05}
+.ig .t2 small{font-size:clamp(8px,1.1vw,11px);letter-spacing:.2em;text-transform:uppercase;margin-top:10px}
+.ig .t3{background:url(img/i3.jpg) center/cover}
+.ig .t4{background:var(--cafe);color:var(--gold)}
+.ig .t4 b{font-family:Fraunces,serif;font-size:clamp(20px,3vw,32px);line-height:1.05;color:var(--paper)}
+.ig .t4 small{font-size:clamp(9px,1.2vw,12px);margin-top:8px}
+.ig .t5{background:var(--olive);color:var(--paper)}
+.ig .t5 .ti{font-size:clamp(28px,5vw,52px);color:var(--gold)}
+.ig .t5 b{font-family:Fraunces,serif;font-size:clamp(18px,2.6vw,28px);margin-top:8px;line-height:1.05}
+.ig .t6{background:var(--paper);border:1px solid var(--line);color:var(--olive)}
+.ig .t6 b{font-family:Fraunces,serif;font-size:clamp(20px,3vw,32px);line-height:1.05}
+.ig .t6 small{color:var(--brass-dk);font-size:clamp(9px,1.2vw,12px);margin-top:8px}
+.ig .play{position:absolute;top:8px;right:8px;color:#fff;font-size:18px}
+
+.brands{display:flex;flex-wrap:wrap;gap:10px}
+.brands span{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:10px 16px;font-weight:500;color:var(--olive);font-size:13px;letter-spacing:.08em}
+
+footer{background:var(--olive-dk);color:#d5dccb;padding:48px 0 28px;margin-top:20px;border-top:4px solid var(--brass)}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}
+footer .flogo{height:34px;width:auto;margin-bottom:14px}
+footer h4{color:var(--gold);font-size:12.5px;margin-bottom:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+footer p,footer li{font-size:14px;margin-bottom:6px;list-style:none;font-weight:300}
+.copy{border-top:1px solid rgba(210,176,122,.25);margin-top:32px;padding-top:18px;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.wa{position:fixed;right:16px;bottom:16px;background:var(--olive);color:var(--paper);border:1.5px solid var(--gold);border-radius:999px;padding:12px 18px;font-weight:500;display:flex;gap:8px;align-items:center;box-shadow:0 10px 25px rgba(0,0,0,.25);z-index:20;font-size:15px}
+.wa .ti{color:var(--gold);font-size:22px}
+
+@media (max-width:900px){
+  .lista,.emp,.visit{grid-template-columns:1fr}
+  .visit .ph{min-height:260px}
+  .catgrid{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  footer .cols{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .search span{display:none}
+  .search{flex:0;padding:10px}
+  header .wrap{justify-content:space-between}
+  .logo img{height:28px}
+  .hero{min-height:600px}
+  .hero .wrap{padding-bottom:36px}
+  .hero .hlogo{height:40px}
+  .since{width:86px;height:86px;font-size:9.5px}
+  .since b{font-size:18px}
+  .stories .wrap{justify-content:flex-start}
+  .bene,.lista,.emp{padding:28px 18px;border-radius:20px}
+  .bene .cards{grid-template-columns:1fr}
+  .visit .info{padding:26px 20px}
+  section{padding:44px 0}
+  .grid{gap:10px}
+  .card .body{padding:12px}
+  .card h3{font-size:13.5px}
+  .wa span{display:none}
+  .club{flex-direction:column;align-items:flex-start}
+  .club>span>span{display:block}
+  .spark::before{left:-24px}.spark::after{right:-24px}
+}
+
+</style>
+</head><body>
+
+
+<div class="proposal">Maqueta de propuesta · <b>Diseñada por 1week</b> · Tu marca, en una semana</div>
+
+<div class="topbar"><div class="wrap">
+  <span><i class="ti ti-map-pin"></i>Manuel Rodríguez 550, Concepción</span>
+  <span><i class="ti ti-truck"></i>Despacho en el Gran Concepción</span>
+  <span><i class="ti ti-credit-card"></i>Paga con Webpay</span>
+</div></div>
+
+<header><div class="wrap">
+  <a class="logo" href="#"><img src="img/i4.png" alt="Colón"></a>
+  <div class="search"><i class="ti ti-search" style="font-size:18px"></i><span>Busca cuadernos, resmas, tóner, acuarelas…</span></div>
+  <div class="icons">
+    <i class="ti ti-user"></i>
+    <span class="cart"><i class="ti ti-shopping-bag"></i><i class="n">2</i></span>
+  </div>
+</div></header>
+
+<nav class="cats"><div class="wrap">
+  <a class="on" href="#">Lista escolar 2027</a><a href="#">Escolar</a><a href="#">Oficina</a><a href="#">Arte</a><a href="#">Tecnología</a><a href="#">Óptica recreativa</a><a href="#">Regalos de Navidad</a><a href="#">Empresas</a>
+</div></nav>
+
+<div class="hero">
+  <div class="bg"></div>
+  <div class="since">El de<b>siempre</b>en Conce</div>
+  <div class="wrap">
+    <img class="hlogo" src="img/i5.png" alt="Colón">
+    <span class="eyebrow">Librería · Concepción</span>
+    <h1>Todo lo que buscas, en un <span class="spark">solo lugar.</span></h1>
+    <p>Útiles escolares, oficina, arte, tecnología y regalos. Ven al local en el centro o compra online y te lo llevamos.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="#">Ver catálogo</a>
+      <a class="btn btn-o" href="#"><i class="ti ti-brand-whatsapp"></i>Cotiza por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<div class="stories"><div class="wrap">
+  <a class="st" href="#bene"><span class="ring"><span class="in light">bene<br>ficios</span></span>Beneficios</a>
+  <a class="st" href="#"><span class="ring"><span class="in"><i class="ti ti-brand-whatsapp"></i></span></span>Comunidad</a>
+  <a class="st" href="#visita"><span class="ring"><span class="in"><i class="ti ti-map-pin"></i></span></span>Ubicación</a>
+  <a class="st" href="#"><span class="ring"><span class="in"><i class="ti ti-mail"></i></span></span>Cotiza</a>
+  <a class="st" href="#visita"><span class="ring"><span class="in"><i class="ti ti-clock"></i></span></span>Horario</a>
+</div></div>
+
+<section id="bene"><div class="wrap">
+  <div class="bene">
+    <h2><span class="spark">beneficios</span></h2>
+    <p class="sub">Descuentos para aprovechar mejor tus compras en Colón</p>
+    <div class="cards">
+      <div class="bcard"><i class="ti ti-school"></i><b>Estudiantes</b><small>Muestra tu credencial y accede a precios especiales todo el año.</small></div>
+      <div class="bcard"><i class="ti ti-users"></i><b>Público general</b><small>Descuentos y ofertas que se renuevan cada semana en el local y online.</small></div>
+    </div>
+    <div class="club">
+      <span><i class="ti ti-brand-whatsapp"></i><span><b style="font-weight:500">Únete a nuestra comunidad</b><br><small style="color:#d5dccb">Ofertas y beneficios exclusivos por WhatsApp</small></span></span>
+      <a class="btn btn-gold" href="#" style="padding:11px 18px">Unirme</a>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="lista">
+    <div>
+      <h2>Lista escolar <em>sin vueltas</em></h2>
+      <p>Olvídate de recorrer tiendas en marzo. Mándanos la lista por WhatsApp, nosotros juntamos todo y tú solo la pasas a buscar.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><span><b>Saca una foto a la lista</b><small>La que te pasó el colegio, tal cual</small></span></div>
+      <div class="step"><span class="n">2</span><span><b>Te mandamos la cotización</b><small>Con opciones por marca y precio</small></span></div>
+      <div class="step"><span class="n">3</span><span><b>Retiras o te la llevamos</b><small>Todo listo, en una sola bolsa Colón</small></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><div><h2>Compra por categoría</h2><p>Todo lo que buscas, ordenado como en el local.</p></div></div>
+  <div class="catgrid">
+    <a class="cat" href="#"><div class="ci"><i class="ti ti-notebook"></i></div>Escolar<small>Cuadernos, lápices, textos</small></a>
+    <a class="cat" href="#"><div class="ci"><i class="ti ti-paperclip"></i></div>Oficina<small>Archivo, papelería, resmas</small></a>
+    <a class="cat" href="#"><div class="ci"><i class="ti ti-palette"></i></div>Arte<small>Óleos, acuarelas, lienzos</small></a>
+    <a class="cat" href="#"><div class="ci"><i class="ti ti-device-laptop"></i></div>Tecnología<small>Accesorios y audio</small></a>
+    <a class="cat" href="#"><div class="ci"><i class="ti ti-binoculars"></i></div>Óptica recreativa<small>Binoculares y telescopios</small></a>
+    <a class="cat" href="#"><div class="ci"><i class="ti ti-wallet"></i></div>Marroquinería<small>Billeteras y chequeras</small></a>
+    <a class="cat" href="#"><div class="ci"><i class="ti ti-pencil"></i></div>Plumas finas<small>Parker, Cross, Waterman</small></a>
+    <a class="cat" href="#"><div class="ci"><i class="ti ti-gift"></i></div>Regalos<small>Para Navidad y todo el año</small></a>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><div><h2>Lo más pedido</h2></div><a href="#">Ver todo →</a></div>
+  <div class="grid">
+    <div class="card">
+      <div class="thumb" style="background:var(--olive-soft)"><span class="tag">Escolar</span>
+        <svg width="120" height="120" viewBox="0 0 120 120"><g transform="rotate(-20 60 60)"><rect x="20" y="30" width="80" height="10" rx="3" fill="#3E5827"/><rect x="20" y="45" width="80" height="10" rx="3" fill="#A9824A"/><rect x="20" y="60" width="80" height="10" rx="3" fill="#4A2E22"/><rect x="20" y="75" width="80" height="10" rx="3" fill="#A9C77F"/></g></svg></div>
+      <div class="body"><span class="brand">Giotto</span><h3>Lápices de colores Stilnovo, 12 unidades</h3><span class="price">$3.200</span><a class="add" href="#">Agregar</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb" style="background:var(--cafe-soft)"><span class="tag">Arte</span>
+        <svg width="120" height="120" viewBox="0 0 120 120"><rect x="15" y="35" width="90" height="50" rx="8" fill="#fff" stroke="#4A2E22" stroke-width="3"/><circle cx="32" cy="52" r="7" fill="#3E5827"/><circle cx="50" cy="52" r="7" fill="#A9824A"/><circle cx="68" cy="52" r="7" fill="#4A2E22"/><circle cx="86" cy="52" r="7" fill="#D2B07A"/><circle cx="32" cy="70" r="7" fill="#A9C77F"/><circle cx="50" cy="70" r="7" fill="#5C6B3E"/><circle cx="68" cy="70" r="7" fill="#C9B48F"/><circle cx="86" cy="70" r="7" fill="#2B3E1C"/></svg></div>
+      <div class="body"><span class="brand">Giotto</span><h3>Acuarela 24 colores, pastillas de 30 mm</h3><span class="price">$4.900</span><a class="add" href="#">Agregar</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb" style="background:var(--olive-soft)"><span class="tag">Oficina</span>
+        <svg width="120" height="120" viewBox="0 0 120 120"><rect x="25" y="40" width="70" height="50" rx="4" fill="#fff" stroke="#3E5827" stroke-width="3"/><rect x="25" y="40" width="70" height="16" fill="#3E5827"/><text x="60" y="78" font-family="Lexend" font-size="12" font-weight="600" text-anchor="middle" fill="#A9824A">CARTA</text></svg></div>
+      <div class="body"><span class="brand">Equalit</span><h3>Resma papel fotocopia carta, 75 g</h3><span class="price">$4.480</span><a class="add" href="#">Agregar</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb" style="background:var(--cafe-soft)"><span class="tag low">Últimas unidades</span>
+        <svg width="120" height="120" viewBox="0 0 120 120"><rect x="38" y="25" width="44" height="70" rx="22" fill="#1F2419"/><line x1="60" y1="27" x2="60" y2="50" stroke="#F5EFE3" stroke-width="2"/><rect x="57" y="34" width="6" height="10" rx="3" fill="#D2B07A"/></svg></div>
+      <div class="body"><span class="brand">Tecmaster</span><h3>Mouse inalámbrico negro</h3><span class="price">$7.100</span><a class="add" href="#">Agregar</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb" style="background:var(--olive-soft)"><span class="tag">Óptica</span>
+        <svg width="120" height="120" viewBox="0 0 120 120"><rect x="22" y="40" width="30" height="46" rx="10" fill="#2B2420"/><rect x="68" y="40" width="30" height="46" rx="10" fill="#2B2420"/><rect x="48" y="50" width="24" height="16" rx="4" fill="#4A2E22"/><circle cx="37" cy="84" r="11" fill="#1F2419" stroke="#A9824A" stroke-width="3"/><circle cx="83" cy="84" r="11" fill="#1F2419" stroke="#A9824A" stroke-width="3"/></svg></div>
+      <div class="body"><span class="brand">Konus</span><h3>Binoculares para observación y paseo</h3><span class="price">Consultar</span><a class="add" href="#">Ver modelos</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb" style="background:var(--cafe-soft)"><span class="tag">Regalos</span>
+        <svg width="120" height="120" viewBox="0 0 120 120"><rect x="24" y="36" width="72" height="50" rx="6" fill="#6B3E26"/><rect x="24" y="36" width="72" height="18" rx="6" fill="#4A2E22"/><rect x="74" y="52" width="22" height="14" rx="3" fill="#A9824A"/><line x1="30" y1="76" x2="66" y2="76" stroke="#8A5536" stroke-width="2" stroke-dasharray="3 3"/></svg></div>
+      <div class="body"><span class="brand">Cuero</span><h3>Billetera de cuero, varios modelos</h3><span class="price">Consultar</span><a class="add" href="#">Ver modelos</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb" style="background:var(--olive-soft)"><span class="tag">Oficina</span>
+        <svg width="120" height="120" viewBox="0 0 120 120"><rect x="18" y="28" width="84" height="64" rx="4" fill="#C9A06A" stroke="#4A2E22" stroke-width="5"/><rect x="34" y="40" width="22" height="18" fill="#F5EFE3" transform="rotate(-6 45 49)"/><rect x="62" y="52" width="24" height="20" fill="#fff" transform="rotate(5 74 62)"/><circle cx="45" cy="41" r="3" fill="#3E5827"/><circle cx="74" cy="53" r="3" fill="#3E5827"/></svg></div>
+      <div class="body"><span class="brand">Talenti</span><h3>Pizarra de corcho 45 × 60 cm</h3><span class="price">$9.800</span><a class="add" href="#">Agregar</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb" style="background:var(--cafe-soft)"><span class="tag">Tecnología</span>
+        <svg width="120" height="120" viewBox="0 0 120 120"><rect x="40" y="20" width="40" height="56" rx="6" fill="#3E5827"/><rect x="48" y="76" width="24" height="24" rx="3" fill="#C9C2B4"/><text x="60" y="54" font-family="Lexend" font-size="12" font-weight="600" text-anchor="middle" fill="#D2B07A">64GB</text></svg></div>
+      <div class="body"><span class="brand">Kingston</span><h3>Pendrive 64 GB USB 3.2</h3><span class="price">$14.900</span><a class="add" href="#">Agregar</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="emp">
+    <div>
+      <h2>¿Compras para tu oficina o colegio?</h2>
+      <p>Somos distribuidora: abastecemos empresas e instituciones de Concepción con todo lo de oficina, aseo y tecnología. Pide tu cotización y te respondemos el mismo día.</p>
+      <div class="btns"><a class="btn btn-gold" href="#">Pedir cotización con factura</a></div>
+    </div>
+    <ul>
+      <li><i class="ti ti-file-text"></i>Papelería, resmas y archivo</li>
+      <li><i class="ti ti-printer"></i>Tóner y cartridges</li>
+      <li><i class="ti ti-coffee"></i>Aseo y cafetería</li>
+      <li><i class="ti ti-truck-delivery"></i>Despacho a tu empresa</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="visita" style="padding-top:0"><div class="wrap">
+  <div class="visit">
+    <div class="ph" role="img" aria-label="Fachada del local Colón en Concepción"></div>
+    <div class="info">
+      <h2>Visítanos en el centro</h2>
+      <dl>
+        <div><dt>Dirección</dt><dd>Manuel Rodríguez 550, Concepción</dd></div>
+        <div><dt>Teléfono</dt><dd>+56 41 291 4400</dd></div>
+        <div><dt>Correo</dt><dd>contacto@dcolon.cl</dd></div>
+        <div><dt>Horario</dt><dd>Revisa el destacado "Horario" en nuestro Instagram</dd></div>
+      </dl>
+      <div class="btns"><a class="btn btn-olive" href="#"><i class="ti ti-map-2"></i>Cómo llegar</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="ig-head">
+    <img src="img/i6.png" alt="">
+    <span><b>@libreriaydistribuidoracolon</b><small>4.395 seguidores · Síguenos en Instagram</small></span>
+  </div>
+  <div class="ig">
+    <div class="t1"><img src="img/i4.png" alt=""><b>beneficios</b><small>Para estudiantes y público general</small></div>
+    <div class="t3"><i class="ti ti-player-play play"></i></div>
+    <div class="t2"><img src="img/i4.png" alt=""><b>¿Y si miramos un poco más allá?</b><small>Óptica recreativa</small></div>
+    <div class="t4"><b>Lista escolar 2027</b><small>Mándala por WhatsApp</small></div>
+    <div class="t5"><i class="ti ti-gift"></i><b>Regalos de Navidad</b></div>
+    <div class="t6"><b>Todo lo que buscas</b><small>en un solo lugar</small></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><div><h2>Las marcas que trabajamos</h2></div></div>
+  <div class="brands">
+    <span>GIOTTO</span><span>FABER-CASTELL</span><span>STABILO</span><span>STAEDTLER</span><span>PILOT</span><span>BIC</span><span>MAPED</span><span>ARTEL</span><span>TORRE</span><span>CALIGRAFIX</span><span>PARKER</span><span>CROSS</span><span>KONUS</span><span>HP</span><span>KINGSTON</span><span>+90 más</span>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <img class="flogo" src="img/i5.png" alt="Colón">
+      <p>Todo lo que buscas, en un solo lugar. Librería y distribuidora en el centro de Concepción.</p>
+    </div>
+    <div>
+      <h4>Visítanos</h4>
+      <p>Manuel Rodríguez 550, Concepción</p>
+      <p>+56 41 291 4400</p>
+      <p>contacto@dcolon.cl</p>
+    </div>
+    <div>
+      <h4>Síguenos</h4>
+      <ul><li>Instagram @libreriaydistribuidoracolon</li><li>Facebook Distribuidora Colon</li><li>Comunidad de WhatsApp</li></ul>
+    </div>
+  </div>
+  <div class="copy"><span>Maqueta de propuesta, no es la web oficial</span><span>Diseño: 1week · @oneweek.chl</span></div>
+</div></footer>
+
+<a class="wa" href="#"><i class="ti ti-brand-whatsapp"></i><span>Cotiza por WhatsApp</span></a>
+
+
+</body></html>
